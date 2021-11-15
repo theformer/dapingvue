@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <!-- <meta name="viewport" npm content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"> -->
+    <title>磐安道路场景大屏</title>
+    <script type="text/javascript" src="https://api.map.baidu.com/api?v=3.0&ak=wtqymOMD455ZfYIwMCA9G2wCSTtYHy5K"></script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+    <script>
+      // 监听窗口进行缩放
+      ;(function(win) {
+        function resize() {
+          document.documentElement.style.scrollbarWidth = 'none'; // 火狐
+          let initWidth = 1920, initHeight = 1080;
+            document.body.style.height = initHeight + 'px';
+            document.body.style.width = initWidth + 'px';
+          let docWidth = window.innerWidth;
+          let docHeight = window.innerHeight;
+          let widthRatio = docWidth / initWidth;
+          let heightRatio = docHeight / initHeight;
+              document.body.style.transform = 'scale(' + widthRatio + ',' + heightRatio + ')';
+              document.body.style.transformOrigin = 'left top';
+              document.documentElement.style.height = document.body.offsetHeight * heightRatio + 'px';
+              window.scaleRatio = {
+                widthRatio,
+                heightRatio
+              }
+        }
+        resize();
+        window.addEventListener('resize', resize);
+      })(window);
+    </script>
+  </body>
+</html>
