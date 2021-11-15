@@ -77,43 +77,6 @@ export default {
         infoBox.style.display = "none";
         infoBox.style.zIndex = "10";
 
-        content.innerHTML = `<div style="font-size: 16px;">
-                              <div style="line-height: 20px;font-size: 20px;font-weight: bold;color: #DFFCFF; white-space: nowrap; text-overflow: ellipsis; overflow: hidden;">${
-                                item.orgname
-                              }</div>
-                              <div
-                              style="padding-top: 13px;font-weight: 500;color: #5CACCA;
-                              width:100%;white-space: wrap; text-overflow: ellipsis;
-                               overflow: hidden;text-overflow: -o-ellipsis-lastline;
-                               display: -webkit-box;-webkit-line-clamp: 2;line-clamp: 2;
-                              -webkit-box-orient: vertical;">
-                              ${item.orgaddress}
-                              </div>
-                              <div style="display: flex;justify-content: space-between;padding-top: 20px;color: #AAE1ED;">
-                                <div style="display: flex;justify-content: center;align-items: center;">
-                                  <img src="${require("@/assets/lc/popup_box_icon_people@2x.png")}" style="width: 17px;height: 17px;"></img>
-                                  <span style="margin-left: 8px;font-weight: 500;">服务人员</span>
-                                </div>
-                                <div>
-                                  <span style="color: #02C6FF;">${
-                                    item.servicecount
-                                  }</span>
-                                  <span>人</span>
-                                </div>
-                              </div>
-                              <div style="display: flex;justify-content: space-between;padding-top: 6px;color: #AAE1ED;">
-                                <div style="display: flex;justify-content: center;align-items: center;">
-                                  <img src="${require("@/assets/lc/popup_box_icon_dingdan@2x.png")}" style="width: 17px;height: 17px;"></img>
-                                  <span style="margin-left: 8px;font-weight: 500;">服务订单</span>
-                                </div>
-                                <div>
-                                  <span style="color: #02C6FF;">${
-                                    item.ordercount
-                                  }</span>
-                                  <span>单</span>
-                                </div>
-                              </div>
-                            </div>`;
 
         div.style.position = "absolute";
         div.style.display = "flex";
@@ -130,9 +93,7 @@ export default {
         icon.addEventListener("mouseout", () => {
           this.hide();
         });
-        icon.addEventListener("click", () => {
-          that.$router.push(`/detail/${item.orgname}`);
-        });
+       
         // 将div添加到覆盖物容器中
         map.getPanes().markerPane.appendChild(div);
         // 保存div实例

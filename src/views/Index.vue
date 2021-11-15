@@ -25,35 +25,6 @@
         </text>
       </svg>
       <div class="header-options flex flex-between">
-<!--        <div-->
-<!--          class="header-select position-relative"-->
-<!--          :class="showSelect ? 'header-select-active' : ''"-->
-<!--          @mouseover="showSelect = true"-->
-<!--          @mouseleave="showSelect = false"-->
-<!--        >-->
-<!--          <div class="header-select-box flex align-center">-->
-<!--            <div class="header-select-value flex1 word-space-one">-->
-<!--              {{ name }}-->
-<!--            </div>-->
-<!--            <img-->
-<!--              class="header-select-icon"-->
-<!--              src="../assets/lc/home_combo_click@2x.png"-->
-<!--            />-->
-<!--          </div>-->
-<!--          <div class="header-select-list" v-show="showSelect">-->
-<!--            <div-->
-<!--              class="header-select-item"-->
-<!--              :class="name == item.areaname ? 'header-select-item-active' : ''"-->
-<!--              @click="setName(item.areaname)"-->
-<!--              v-for="(item, index) in areaList"-->
-<!--              :key="index"-->
-<!--            >-->
-<!--              {{ item.areaname }}-->
-<!--            </div>-->
-<!--          </div>-->
-<!--          <div class="header-select-line header-select-line1"></div>-->
-<!--          <div class="header-select-line header-select-line2"></div>-->
-<!--        </div>-->
         <div class="header-left flex align-center">
           <div class="header-hour synthesize" :class="flag?'left-image-url':''" @click="moduleClickEvent(flag=true)">综合展示</div>
         </div>
@@ -77,54 +48,6 @@
           <Way :name="name" />
         </div>
       </div>
-<!--      <div class="body-middle flex flex-column flex-between">-->
-<!--        <div-->
-<!--          class="flex align-center flex-between"-->
-<!--          style="padding: 0 60px; z-index: 2"-->
-<!--        >-->
-<!--          <div class="flex flex-column align-center">-->
-<!--            <div class="data-value">-->
-<!--              <ICountUp-->
-<!--                :start="0"-->
-<!--                :endVal="102568"-->
-<!--                :decimals="0"-->
-<!--                :duration="3"-->
-<!--                :options="options"-->
-<!--                ref="old"-->
-<!--              ></ICountUp>-->
-<!--            </div>-->
-<!--            <div class="data-name flex align-center flex-center">-->
-<!--              老人总数(人)-->
-<!--            </div>-->
-<!--          </div>-->
-<!--          <div class="flex flex-column align-center">-->
-<!--            <div class="data-value">-->
-<!--              <ICountUp-->
-<!--                :start="0"-->
-<!--                :endVal="102568"-->
-<!--                :decimals="0"-->
-<!--                :duration="3"-->
-<!--                :options="options"-->
-<!--                ref="org"-->
-<!--              ></ICountUp>-->
-<!--            </div>-->
-<!--            <div-->
-<!--              class="data-name flex align-center flex-center"-->
-<!--              style="cursor: pointer; pointer-events: initial"-->
-<!--              @click="toDetail"-->
-<!--            >-->
-<!--              <div>养老机构(家)</div>-->
-<!--              <img-->
-<!--                src="@/assets/lc/home_icon_yanglao_enter.png"-->
-<!--                style="width: 20px; height: 28px; margin-top: 4px"-->
-<!--              />-->
-<!--            </div>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--        <div>-->
-<!--          <ServiceRecord :name="name" />-->
-<!--        </div>-->
-<!--      </div>-->
       <div class="body-right">
         <div class="service-num">
           <ServiceNum :name="name" />
